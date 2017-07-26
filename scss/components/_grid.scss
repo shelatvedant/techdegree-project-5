@@ -1,0 +1,67 @@
+// ==========================================================================
+// Containers
+// ==========================================================================
+// Container
+
+.container {
+  @include flexbox;
+  @include flex-direction(column);
+  width: 90%;
+  margin: auto;
+  .grid {
+    @include e(row) {
+      @include flexbox;
+      @include flex-direction(column);
+      @include align-items(center);
+      padding: em(20px);
+      @include mq('desktop') {
+        @include flex-direction(row);
+        @include justify-content(space-between);
+      }
+    }
+    @include e(col){
+      @include g-width;
+    }
+  }
+  [class^="grid__col--"] {
+    margin-top: em(10px);
+    padding: em(10px);
+    @include flexbox;
+    @include align-items(center);
+    @include align-self(stretch);
+    @include flex-direction(column);
+
+    @include mq(desktop) {
+      border-radius: 10px;
+      margin-left:0.5em;
+    }
+  }
+ }
+.grid__row--12 {
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  padding: em(20px);
+  @include mq('desktop') {
+    @include flex-direction(row);
+    @include justify-content(space-between);
+
+  }
+}
+.centered.grid__col--7 {
+  width: 100%;
+  @include mq(desktop){
+    margin: auto;
+  }
+}
+
+.grid__row--12 .grid__col--12 {
+  @include mq(desktop){
+    @include flex-direction(row);
+  }
+
+}
+// Centered
+.centered {
+  @extend %centered;
+}
