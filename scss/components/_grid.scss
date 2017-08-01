@@ -30,10 +30,12 @@
     @include align-items(center);
     @include align-self(stretch);
     @include flex-direction(column);
+    /*@include flex-basis(7);*/
+
 
     @include mq(desktop) {
       border-radius: 10px;
-      margin-left:0.5em;
+
     }
   }
  }
@@ -48,10 +50,12 @@
 
   }
 }
+
+
 .centered.grid__col--7 {
   width: 100%;
   @include mq(desktop){
-    margin: auto;
+    /*margin: auto;*/
   }
 }
 

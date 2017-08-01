@@ -74,7 +74,7 @@
 // Flex basis
 // - the initial main size of the flex item
 @mixin flex-basis($width: $g-col-width) {
-  flex-basis: $width;
+  flex-basis:$width;
 }
 
 // Grid Cols
